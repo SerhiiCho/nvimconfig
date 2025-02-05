@@ -17,10 +17,9 @@ vim.cmd("set smartcase")
 vim.cmd("syntax enable")
 
 -- Spaces Tabs Settings
-local ident = 4
-vim.cmd("set tabstop=" .. ident)
-vim.cmd("set softtabstop=" .. ident)
-vim.cmd("set shiftwidth=" .. ident)
+vim.cmd("set tabstop=4")
+vim.cmd("set softtabstop=4")
+vim.cmd("set shiftwidth=4")
 vim.cmd("set smarttab")
 vim.cmd("set autoindent")
 
@@ -33,5 +32,6 @@ vim.cmd("set listchars+=trail:·")
 -- Set Theme
 vim.cmd.colorscheme "catppuccin"
 
--- Set Custom Mapping
+-- Set Mapping
+vim.g.mapleader = " "
 vim.cmd("nnoremap <CR> :nohlsearch<cr>")
