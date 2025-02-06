@@ -1,3 +1,3 @@
 return {
-	'dam9000/classic-copy-paste.nvim',
+	"dam9000/classic-copy-paste.nvim",
 }

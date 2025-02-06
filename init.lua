@@ -1,4 +1,4 @@
-require('config.lazy')
+require("config.lazy")
 
 -- General Settings
 vim.cmd("set nocompatible")
