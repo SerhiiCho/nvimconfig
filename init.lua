@@ -1,4 +1,4 @@
-require("config.lazy")
+require('config.lazy')
 
 -- General Settings
 vim.cmd("set nocompatible")
@@ -28,9 +28,6 @@ vim.cmd("set list")
 vim.cmd("set listchars=")
 vim.cmd("set listchars+=tab:··")
 vim.cmd("set listchars+=trail:·")
-
--- Set Theme
-vim.cmd.colorscheme "catppuccin"
 
 -- Set Mapping
 vim.g.mapleader = " "
