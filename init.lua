@@ -53,6 +53,9 @@ vim.cmd("set t_Co=256")
 vim.opt.showmatch = true
 vim.cmd("set path+=**")
 
+-- Don't show the mode, since it's already in the status line
+vim.opt.showmode = false
+
 -- Enable enhanced menu completion when typing something
 vim.opt.wildmenu = true
 vim.cmd("set nowrap")
@@ -67,6 +70,20 @@ vim.opt.autoindent = true
 
 -- Dispay Whitespace Characters
 vim.opt.list = true
-vim.opt.listchars = { tab = "··", trail = "·" }
+vim.opt.listchars = { tab = '» ', trail = "·", nbsp = '␣' }
+
+-- Diagnostics Keymaps
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next, { desc = "Go to next [D]iagnostic message" })
+
+-- Highlight when yanking text
+-- Try it with `yap` in normal mode
+vim.api.nvim_create_autocmd("TextYankPost", {
+	desc = "Highlight when yanking text",
+	group = vim.api.nvim_create_augroup("kickstart-highlight-yank", { clear = true }),
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+})
 
 require("config.lazy")
