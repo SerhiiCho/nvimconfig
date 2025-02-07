@@ -1,3 +1,5 @@
+local theme = require("functions.system_theme")
+
 -- Set <space> as the leader key
 vim.g.mapleader = " "
 
@@ -44,7 +46,6 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 vim.keymap.set("i", "jj", "<Esc>")
 
 -- General settings
-vim.opt.background = "dark"
 vim.cmd("set nocompatible")
 vim.cmd("set noswapfile")
 vim.cmd("set t_Co=256")
@@ -71,6 +72,8 @@ vim.opt.autoindent = true
 -- Dispay Whitespace Characters
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = "·", nbsp = '␣' }
+
+theme.applySystemTheme()
 
 -- Diagnostics Keymaps
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Go to previous [D]iagnostic message" })
