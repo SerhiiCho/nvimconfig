@@ -1,3 +1,5 @@
+-- https://github.com/nvim-treesitter/nvim-treesitter
+
 local treesitter = {
 	"nvim-treesitter/nvim-treesitter",
 	build = function()
