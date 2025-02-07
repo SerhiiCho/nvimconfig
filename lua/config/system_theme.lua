@@ -1,6 +1,4 @@
-local M = {}
-
-function M.applySystemTheme()
+function applySystemTheme()
   local systemTheme = io.popen("defaults read -g AppleInterfaceStyle 2>/dev/null"):read("*a")
 
   if systemTheme:match("Dark") then
@@ -10,4 +8,4 @@ function M.applySystemTheme()
   end
 end
 
-return M
+applySystemTheme()
