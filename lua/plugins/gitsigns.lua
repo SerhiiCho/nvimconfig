@@ -29,6 +29,8 @@ return {
 						gitsigns.nav_hunk("prev")
 					end
 				end, { desc = "Jump to previous git [c]hange" })
+
+				map('n', '<leader>diff', gitsigns.diffthis)
 			end,
 		},
 	},
