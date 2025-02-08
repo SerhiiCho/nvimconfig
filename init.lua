@@ -4,9 +4,9 @@ vim.g.mapleader = " "
 -- Nerd Font
 vim.g.have_nerd_font = true
 
+require("config.go_import")
 require("config.keymaps")
 require("config.vim_options")
 require("config.system_theme")
 require("config.autocmd")
-require("config.go_import")
 require("config.lazy")
