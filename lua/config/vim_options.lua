@@ -8,6 +8,9 @@ vim.opt.mouse = "a"
 -- Enable break indent for longs wrapping lines
 vim.opt.breakindent = true
 
+-- Disable word wrap
+vim.opt.wrap = false
+
 -- Enable undo history
 vim.opt.undofile = true
 
