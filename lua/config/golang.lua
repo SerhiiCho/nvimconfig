@@ -12,3 +12,11 @@ local importGoPackages = function()
 end
 
 vim.keymap.set("n", "<leader>i", importGoPackages)
+
+-- Format file before write
+vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = "*.go",
+    callback = function()
+        vim.lsp.buf.format({ async = false }) -- Use Neovim's built-in LSP formatting
+    end,
+})

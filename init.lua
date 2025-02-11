@@ -13,13 +13,13 @@ vim.filetype.add({
 })
 
 -- todo: termporary code for testing textwirelsp
-vim.api.nvim_create_autocmd("VimEnter", {
-	callback = function()
-		require("load_textwire_lsp")
-	end
-})
+-- vim.api.nvim_create_autocmd("VimEnter", {
+-- 	callback = function()
+-- 		require("load_textwire_lsp")
+-- 	end
+-- })
 
-require("config.go_import")
+require("config.golang")
 require("config.keymaps")
 require("config.vim_options")
 require("config.system_theme")

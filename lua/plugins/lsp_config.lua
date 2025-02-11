@@ -13,11 +13,15 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
+				-- A list of servers to automatically install if they're not already installed. Example: { "rust_analyzer@nightly", "lua_ls" }
+				-- This setting has no relation with the `automatic_installation` setting.
+				---@type string[]
 				ensure_installed = {
 					"lua_ls",
 					"gopls",
 					"ts_ls",
 					"intelephense",
+					"html",
 				},
 			})
 		end,
@@ -31,19 +35,23 @@ return {
 			local lspconfig = require("lspconfig")
 
 			lspconfig.lua_ls.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 
 			lspconfig.gopls.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 
 			lspconfig.ts_ls.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
 			})
 
 			lspconfig.intelephense.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
+			})
+
+			lspconfig.html.setup({
+				capabilities = capabilities,
 			})
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
