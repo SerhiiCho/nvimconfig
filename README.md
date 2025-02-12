@@ -38,13 +38,6 @@
             </g>
         </g>
     </g>
-<style xmlns="" class="darkreader darkreader--fallback">html, body, body :not(iframe) {
-    background-color: var(--darkreader-background-ffffff, #212120) !important;
-    border-color: var(--darkreader-border-404040, #7f786e) !important;
-    color: var(--darkreader-text-000000, #f9f3e8) !important;
-}
-div[style*="background-color: rgb(135, 135, 135)"] {
-    background-color: #878787 !important;
-}</style><script xmlns=""/></svg>
+</svg>
 
 Feel free to copy and download anything you want from this repo. Happy coding!
