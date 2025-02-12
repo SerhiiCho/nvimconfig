@@ -1,6 +1,6 @@
 # Neovim Configurations
 
-<p align="center"
+<p align="center">
     <img src="logo.png" alt="Neovim Logo" width="200">
 </p>
 
