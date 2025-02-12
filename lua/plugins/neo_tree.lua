@@ -9,6 +9,10 @@ return {
 		"MunifTanjim/nui.nvim",
 	},
 	config = function()
-		vim.keymap.set("n", "<C-\\>", ":Neotree filesystem reveal left<CR>", {})
+		require("neo-tree").setup({
+			close_if_last_window = true,
+		})
+
+		vim.keymap.set("n", "<leader>i", ":Neotree toggle<CR>", {})
 	end,
 }
