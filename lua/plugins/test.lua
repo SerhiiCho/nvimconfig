@@ -3,6 +3,8 @@
 return {
 	"klen/nvim-test",
 	config = function()
+		require('nvim-test').setup()
+
 		vim.keymap.set("n", "<leader>tn", '<cmd>TestNearest<CR>', {
 			desc = "[T]est [N]earest",
 		})
