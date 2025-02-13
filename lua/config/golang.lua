@@ -11,8 +11,6 @@ local importGoPackages = function()
 	vim.api.nvim_win_set_cursor(0, { new_line, save_cursor[2] })
 end
 
-vim.keymap.set("n", "<leader>gi", importGoPackages)
-
 -- Format file before write
 vim.api.nvim_create_autocmd("BufWritePre", {
     pattern = "*.go",
