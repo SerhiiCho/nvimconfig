@@ -1,4 +1,9 @@
 -- https://github.com/hrsh7th/nvim-cmp
+-- https://github.com/L3MON4D3/LuaSnip
+-- https://github.com/saadparwaiz1/cmp_luasnip
+-- https://github.com/rafamadriz/friendly-snippets
+
+local go_snippets = require("snippets.go")
 
 return {
 	{
@@ -15,6 +20,12 @@ return {
 		"hrsh7th/nvim-cmp",
 		config = function()
 			local cmp = require("cmp")
+			local ls = require("luasnip")
+			local snippet = ls.snippet
+			local text = ls.text_node
+			local insert = ls.insert_node
+
+			ls.add_snippets("go", go_snippets(snippet, text, insert))
 
 			require("luasnip.loaders.from_vscode").lazy_load()
 
