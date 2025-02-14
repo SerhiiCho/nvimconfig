@@ -21,3 +21,11 @@ vim.api.nvim_create_autocmd("VimEnter", {
         end
     end,
 })
+
+-- Format file before writing
+vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = { "*.ts", "*.tsx", "*.vue", "*.js" },
+    callback = function()
+        vim.lsp.buf.format({ async = false })
+    end,
+})
