@@ -31,8 +31,8 @@ return {
 		config = function()
 			-- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
 			local lspconfig = require("lspconfig")
+			local util = require("lspconfig.util")
 
 			lspconfig.lua_ls.setup({
 				capabilities = capabilities,
@@ -48,6 +48,11 @@ return {
 
 			lspconfig.intelephense.setup({
 				capabilities = capabilities,
+				filetypes = { "php" },
+				root_dir = function(fname)
+					local root = util.root_pattern("composer.json", ".git", "vendor")(fname)
+					return root or vim.fn.getcwd() -- Fallback to current working directory
+				end,
 			})
 
 			lspconfig.html.setup({

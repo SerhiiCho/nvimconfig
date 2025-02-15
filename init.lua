@@ -20,7 +20,7 @@ vim.filetype.add({
 -- })
 
 require("config.golang")
-require("config.keymaps")
+require("config.mappings")
 require("config.vim_options")
 require("config.system_theme")
 require("config.autocmd")
