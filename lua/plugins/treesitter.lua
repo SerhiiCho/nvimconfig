@@ -10,16 +10,18 @@ local treesitter = {
 
 		configs.setup({
 			ensure_installed = {
-				"c",
 				"lua",
 				"vim",
 				"query",
 				"javascript",
+				"typescript",
 				"html",
+				"css",
+				"scss",
 				"php",
+				"phpdoc",
 				"go",
 				"vue",
-				"typescript",
 			},
 			highlight = { enable = true },
 			indent = { enable = true },
