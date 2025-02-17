@@ -63,7 +63,7 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.smarttab = true
 vim.opt.autoindent = true
-vim.opt.expandtab = true
+-- vim.opt.expandtab = true
 
 -- Dispay Whitespace Characters
 vim.opt.list = true

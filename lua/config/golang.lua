@@ -7,7 +7,7 @@ local importGoPackages = function()
 
 	-- Move one line down after restoring the position.
 	-- Ensure its within bounds
-	local new_line = math.min(save_cursor[1] + 1, vim.api.nvim_buf_line_count(0))
+	local new_line = math.min(save_cursor[1], vim.api.nvim_buf_line_count(0))
 	vim.api.nvim_win_set_cursor(0, { new_line, save_cursor[2] })
 end
 
