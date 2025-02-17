@@ -3,68 +3,110 @@
 -- https://github.com/neovim/nvim-lspconfig
 
 return {
-	{
-		"williamboman/mason.nvim",
-		config = function()
-			require("mason").setup()
-		end,
-	},
-	{
-		"williamboman/mason-lspconfig.nvim",
-		config = function()
-			require("mason-lspconfig").setup({
-				-- A list of servers to automatically install if they're not already installed. Example: { "rust_analyzer@nightly", "lua_ls" }
-				-- This setting has no relation with the `automatic_installation` setting.
-				---@type string[]
-				ensure_installed = {
-					"lua_ls",
-					"gopls",
-					"ts_ls",
-					"intelephense",
-					"html",
-				},
-			})
-		end,
-	},
-	{
-		"neovim/nvim-lspconfig",
-		config = function()
-			-- The nvim-cmp almost supports LSP's capabilities so You should advertise it to LSP servers..
-			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-			local lspconfig = require("lspconfig")
-			local util = require("lspconfig.util")
+    {
+        "williamboman/mason.nvim",
+        config = function()
+            require("mason").setup()
+        end,
+    },
+    {
+        "williamboman/mason-lspconfig.nvim",
+        config = function()
+            require("mason-lspconfig").setup({
+                --- @type string[]
+                ensure_installed = {
+                    "lua_ls", -- lua
+                    "gopls", -- go
+                    "ts_ls", -- typescript
+                    "html", -- html
+                    "cssls", -- css
+                    "tailwindcss", -- tailwindcss
+                    "intelephense", -- php
+                    "phpactor", -- php
+                    "volar", -- vue 3
+                },
+            })
+        end,
+    },
+    {
+        "neovim/nvim-lspconfig",
+        config = function()
+            local lspconfig = require("lspconfig")
+            local opts = { noremap = true, silent = true }
 
-			lspconfig.lua_ls.setup({
-				capabilities = capabilities,
-			})
+            local on_attach = function(_, bufnr)
+                opts.buffer = bufnr
 
-			lspconfig.gopls.setup({
-				capabilities = capabilities,
-			})
+                vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+                vim.keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<cr>", opts)
+                vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references<cr>", opts)
+                vim.keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<cr>", opts)
+                vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+                vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
+            end
 
-			lspconfig.ts_ls.setup({
-				capabilities = capabilities,
-			})
+            local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-			lspconfig.intelephense.setup({
-				capabilities = capabilities,
-				filetypes = { "php" },
-				root_dir = function(fname)
-					local root = util.root_pattern("composer.json", ".git", "vendor")(fname)
-					return root or vim.fn.fnamemodify(fname, ":h") or vim.loop.os_homedir()
-				end,
-			})
+            lspconfig.lua_ls.setup({
+                on_attach = on_attach,
+                capabilities = capabilities,
+                settings = {
+                    Lua = {
+                        diagnostics = {
+                            globals = { "vim" },
+                        },
+                    },
+                },
+            })
 
-			lspconfig.html.setup({
-				capabilities = capabilities,
-			})
+            lspconfig.gopls.setup({
+                on_attach = on_attach,
+                capabilities = capabilities,
+            })
 
-			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-			vim.keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<cr>", {})
-			vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references<cr>", {})
-			vim.keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<cr>", {})
-			vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, {})
-			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
-		end,
-	},
+            lspconfig.html.setup({
+                on_attach = on_attach,
+                capabilities = capabilities,
+            })
+
+            lspconfig.cssls.setup({
+                on_attach = on_attach,
+                capabilities = capabilities,
+            })
+
+            lspconfig.tailwindcss.setup({
+                on_attach = on_attach,
+                capabilities = capabilities,
+            })
+
+            lspconfig.intelephense.setup({
+                on_attach = on_attach,
+                capabilities = capabilities,
+            })
+
+            lspconfig.phpactor.setup({
+                on_attach = on_attach,
+                capabilities = capabilities,
+            })
+
+            -- WE DON'T NEED to setup ts_ls because it's already setup by volar.
+            -- If you remove volar, you need to setup ts_ls here instead.
+            lspconfig.volar.setup({
+                on_attach = on_attach,
+                capabilities = capabilities,
+                filetypes = {
+                    "vue",
+                    "typescript",
+                    "javascript",
+                    "javascriptreact",
+                    "typescriptreact",
+                },
+                init_options = {
+                    vue = {
+                        hybridMode = false,
+                    },
+                },
+            })
+        end,
+    },
 }
