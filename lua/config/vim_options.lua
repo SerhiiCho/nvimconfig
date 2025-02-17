@@ -1,9 +1,16 @@
--- Line numbers
+-- Display line numbers in the left column
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+-- Move cursor to the split screen after splitting
+vim.opt.splitbelow = true
+vim.opt.splitright = true
+
 -- Enable mouse mode, can be useful for resizing splits
 vim.opt.mouse = "a"
+
+-- Make :find and :edit search recursively in subdirectories
+vim.opt.path:append("**")
 
 -- Enable break indent for longs wrapping lines
 vim.opt.breakindent = true
@@ -47,12 +54,16 @@ vim.opt.showmode = false
 -- Enable enhanced menu completion when typing something
 vim.opt.wildmenu = true
 
+-- Keep the cursor in the middle of the screen
+vim.opt.scrolloff = 999
+
 -- Spaces Tabs Settings
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.smarttab = true
 vim.opt.autoindent = true
+vim.opt.expandtab = true
 
 -- Dispay Whitespace Characters
 vim.opt.list = true

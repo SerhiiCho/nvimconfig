@@ -51,7 +51,7 @@ return {
 				filetypes = { "php" },
 				root_dir = function(fname)
 					local root = util.root_pattern("composer.json", ".git", "vendor")(fname)
-					return root or vim.fn.getcwd() -- Fallback to current working directory
+					return root or vim.fn.fnamemodify(fname, ":h") or vim.loop.os_homedir()
 				end,
 			})
 
