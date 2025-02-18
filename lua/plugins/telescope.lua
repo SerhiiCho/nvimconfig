@@ -13,6 +13,8 @@ return {
 		local actions = require("telescope.actions")
 		local themes = require("telescope.themes")
 
+		telescope.load_extension("fzf")
+
 		telescope.setup({
 			defaults = {
 				mappings = {
@@ -21,6 +23,9 @@ return {
 						["<C-j>"] = actions.move_selection_next,
 					},
 				},
+			},
+			extensions = {
+				fzf = {}
 			},
 		})
 
