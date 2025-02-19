@@ -15,7 +15,7 @@ return {
 		end)
 
 		-- Show Quick Menu
-		vim.keymap.set("n", "<C-e>", function()
+		vim.keymap.set("n", "<leader>hh", function()
 			harpoon.ui:toggle_quick_menu(harpoon:list())
 		end)
 

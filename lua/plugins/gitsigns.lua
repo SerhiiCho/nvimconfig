@@ -31,20 +31,20 @@ return {
 					end
 				end, { desc = "Jump to previous git [c]hange" })
 
-				map("n", "<leader>hd", gitsigns.diffthis, {
-					desc = "Diff the current file",
+				map("n", "<leader>gd", gitsigns.diffthis, {
+					desc = "[G]it [D]iff the current hunk",
 				})
 
-				map("n", "<leader>hs", gitsigns.stage_hunk, {
-					desc = "Stage/Unstage the hunk under the cursor",
+				map("n", "<leader>gs", gitsigns.stage_hunk, {
+					desc = "[G]it [S]tage/Unstage the hunk under the cursor",
 				})
 
-				map('n', '<leader>hr', gitsigns.reset_hunk, {
-					desc = "Reset the hunk under the cursor",
+				map('n', '<leader>gr', gitsigns.reset_hunk, {
+					desc = "[G]it [R]eset the hunk under the cursor",
 				})
 
-				map('n', '<leader>hp', gitsigns.preview_hunk, {
-					desc = "Preview the hunk under the cursor",
+				map('n', '<leader>gp', gitsigns.preview_hunk, {
+					desc = "[G]it [P]review the hunk under the cursor",
 				})
 			end,
 		},

@@ -39,7 +39,7 @@ vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor
-vim.opt.scrolloff = 10
+vim.opt.scrolloff = 5
 
 -- Set highlight on search, but clear on <Esc> in normal mode
 vim.opt.hlsearch = true
@@ -55,7 +55,7 @@ vim.opt.showmode = false
 vim.opt.wildmenu = true
 
 -- Keep the cursor in the middle of the screen
-vim.opt.scrolloff = 999
+-- vim.opt.scrolloff = 999
 
 -- Spaces Tabs Settings
 vim.opt.tabstop = 4
