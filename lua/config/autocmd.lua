@@ -15,3 +15,12 @@ vim.api.nvim_create_autocmd("BufWritePre", {
         vim.lsp.buf.format({ async = false })
     end,
 })
+
+-- Enable word wrap for some files
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "markdown", "text" },
+    callback = function()
+        vim.opt.wrap = true    -- Enable word wrap
+        vim.opt.linebreak = true -- Prevent breaking words in half
+    end,
+})
