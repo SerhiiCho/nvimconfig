@@ -21,10 +21,10 @@ vim.api.nvim_create_autocmd("VimEnter", {
 	end,
 })
 
-require("serhii.golang")
-require("serhii.lua")
-require("serhii.remap")
-require("serhii.vim_options")
-require("serhii.system_theme")
-require("serhii.autocmd")
-require("serhii.lazy")
+require("config.golang")
+require("config.lua")
+require("config.remap")
+require("config.vim_options")
+require("config.system_theme")
+require("config.autocmd")
+require("config.lazy")
