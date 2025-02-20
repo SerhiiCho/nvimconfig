@@ -2,7 +2,10 @@
 vim.g.mapleader = " "
 
 -- Nerd Font
-vim.g.have_nerd_font = true
+vim.g.have_nerd_font = false
+
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"
 
 -- Add file type detection for .tw and .tw.html
 vim.filetype.add({

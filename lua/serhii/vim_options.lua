@@ -56,9 +56,6 @@ vim.opt.incsearch = true
 -- Highlight matching pairs of characters like brackets
 vim.opt.showmatch = true
 
--- Don't show the mode, since it's already in the status line
-vim.opt.showmode = false
-
 -- Enable enhanced menu completion when typing something
 vim.opt.wildmenu = true
 
@@ -68,8 +65,6 @@ vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 vim.opt.smartindent = true
--- vim.opt.smarttab = true
--- vim.opt.autoindent = true
 
 -- Dispay Whitespace Characters
 vim.opt.list = true
