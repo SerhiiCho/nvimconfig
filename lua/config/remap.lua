@@ -1,26 +1,26 @@
 vim.keymap.set("v", "<C-c>", '"+y', {
-    desc = "Copy from visual mode to system clipboard",
-    noremap = true,
+	desc = "Copy from visual mode to system clipboard",
+	noremap = true,
 })
 
 vim.keymap.set("n", "<leader>ex", vim.cmd.Ex, {
-    desc = "Open a file [e][x]plorer at the current file's location",
-    noremap = true,
+	desc = "Open a file [e][x]plorer at the current file's location",
+	noremap = true,
 })
 
 vim.keymap.set("n", "<leader>pr", "<cmd>silent !tmux neww tmux-sessionizer<CR>", {
-    desc = "Open a [pr]oject sessionizer",
+	desc = "Open a [pr]oject sessionizer",
 })
 
 vim.keymap.set("n", "<leader>s", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", {
-    desc = "Search and replace the current word under the cursor",
-    noremap = true,
+	desc = "Search and replace the current word under the cursor",
+	noremap = true,
 })
 
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", {
-    desc = "Make the current file executable",
-    silent = true,
-    noremap = true,
+	desc = "Make the current file executable",
+	silent = true,
+	noremap = true,
 })
 
 -- Excecute files for different languages
