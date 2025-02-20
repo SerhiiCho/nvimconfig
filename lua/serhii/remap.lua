@@ -1,26 +1,11 @@
-vim.keymap.set("n", "<CR>", "<cmd>nohlsearch<CR>", {
-	desc = "Remove highlight after search has been done",
-	noremap = true,
-})
-
-vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, {
-	desc = "Go to previous [D]iagnostic message",
-	noremap = true,
-})
-
-vim.keymap.set("n", "]d", vim.diagnostic.goto_next, {
-	desc = "Go to next [D]iagnostic message",
-	noremap = true,
-})
-
 vim.keymap.set("v", "<C-c>", '"+y', {
-	desc = "Copy from visual mode to system clipboard",
-	noremap = true,
+    desc = "Copy from visual mode to system clipboard",
+    noremap = true,
 })
 
 vim.keymap.set("n", "<leader>ex", vim.cmd.Ex, {
-	desc = "Open a file [e][x]plorer at the current file's location",
-	noremap = true,
+    desc = "Open a file [e][x]plorer at the current file's location",
+    noremap = true,
 })
 
 -- Excecute files for different languages

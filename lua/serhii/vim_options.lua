@@ -2,6 +2,9 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+-- Keey the cursor in VIM style in insert mode
+vim.opt.guicursor = ""
+
 -- Move cursor to the split screen after splitting
 vim.opt.splitbelow = true
 vim.opt.splitright = true
@@ -25,8 +28,11 @@ vim.opt.undofile = true
 -- When there is an error or warning, you'll see a letter in that column
 vim.opt.signcolumn = "yes"
 
--- Decrease update time
-vim.opt.updatetime = 250
+-- A nice way to keep your code within a certain width
+vim.opt.colorcolumn = "80"
+
+-- VIM update time (200 is fine for most users)
+vim.opt.updatetime = 100
 
 -- Decrease mapped sequence wait time
 -- Display which-key popup sooner
@@ -39,10 +45,12 @@ vim.opt.inccommand = "split"
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor
-vim.opt.scrolloff = 5
+vim.opt.scrolloff = 7
 
--- Set highlight on search, but clear on <Esc> in normal mode
-vim.opt.hlsearch = true
+-- Hightlight all search results
+vim.opt.hlsearch = false
+
+-- Highlight search result as you type
 vim.opt.incsearch = true
 
 -- Highlight matching pairs of characters like brackets
@@ -54,22 +62,20 @@ vim.opt.showmode = false
 -- Enable enhanced menu completion when typing something
 vim.opt.wildmenu = true
 
--- Keep the cursor in the middle of the screen
--- vim.opt.scrolloff = 999
-
 -- Spaces Tabs Settings
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.smarttab = true
-vim.opt.autoindent = true
--- vim.opt.expandtab = true
+vim.opt.expandtab = true
+vim.opt.smartindent = true
+-- vim.opt.smarttab = true
+-- vim.opt.autoindent = true
 
 -- Dispay Whitespace Characters
 vim.opt.list = true
 vim.opt.listchars = {
-	tab = '» ',
-	trail = '⋅',
-	nbsp = '␣',
-	space = '⋅',
+    tab = "» ",
+    trail = "⋅",
+    nbsp = "␣",
+    space = "⋅",
 }
