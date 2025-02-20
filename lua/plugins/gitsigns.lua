@@ -39,11 +39,11 @@ return {
 					desc = "[G]it [S]tage/Unstage the hunk under the cursor",
 				})
 
-				map('n', '<leader>gr', gitsigns.reset_hunk, {
+				map("n", "<leader>gr", gitsigns.reset_hunk, {
 					desc = "[G]it [R]eset the hunk under the cursor",
 				})
 
-				map('n', '<leader>gp', gitsigns.preview_hunk, {
+				map("n", "<leader>gp", gitsigns.preview_hunk, {
 					desc = "[G]it [P]review the hunk under the cursor",
 				})
 			end,
