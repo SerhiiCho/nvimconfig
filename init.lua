@@ -18,9 +18,9 @@ vim.api.nvim_create_autocmd("VimEnter", {
 	end
 })
 
-require("config.golang")
-require("config.mappings")
-require("config.vim_options")
-require("config.system_theme")
-require("config.autocmd")
-require("config.lazy")
+require("serhii.golang")
+require("serhii.remap")
+require("serhii.vim_options")
+require("serhii.system_theme")
+require("serhii.autocmd")
+require("serhii.lazy")
