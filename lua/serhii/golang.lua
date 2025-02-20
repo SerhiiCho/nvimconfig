@@ -13,10 +13,9 @@ end
 
 -- Format Go file before write
 vim.api.nvim_create_autocmd("BufWritePre", {
-    pattern = "*.go",
-    callback = function()
-		-- Use Neovim's built-in LSP formatting
-        vim.lsp.buf.format({ async = false })
+	pattern = "*.go",
+	callback = function()
+		vim.lsp.buf.format({ async = false })
 		importGoPackages()
-    end,
+	end,
 })
