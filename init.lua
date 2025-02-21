@@ -17,7 +17,7 @@ vim.filetype.add({
 
 vim.api.nvim_create_autocmd("VimEnter", {
 	callback = function()
-		require("load_textwire_lsp")
+		require("textwire.load_textwire_lsp")
 	end,
 })
 
