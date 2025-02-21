@@ -56,6 +56,9 @@ vim.opt.incsearch = true
 -- Highlight matching pairs of characters like brackets
 vim.opt.showmatch = true
 
+-- Don't show the mode, since it's already in lualine
+vim.opt.showmode = false
+
 -- Enable enhanced menu completion when typing something
 vim.opt.wildmenu = true
 
