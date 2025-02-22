@@ -48,16 +48,13 @@ vim.opt.cursorline = true
 vim.opt.scrolloff = 7
 
 -- Hightlight all search results
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 
 -- Highlight search result as you type
 vim.opt.incsearch = true
 
 -- Highlight matching pairs of characters like brackets
 vim.opt.showmatch = true
-
--- Don't show the mode, since it's already in lualine
-vim.opt.showmode = false
 
 -- Enable enhanced menu completion when typing something
 vim.opt.wildmenu = true
@@ -72,8 +69,8 @@ vim.opt.smartindent = true
 -- Dispay Whitespace Characters
 vim.opt.list = true
 vim.opt.listchars = {
-    tab = "» ",
-    trail = "⋅",
-    nbsp = "␣",
-    space = "⋅",
+	tab = "» ",
+	trail = "⋅",
+	nbsp = "␣",
+	space = "⋅",
 }
