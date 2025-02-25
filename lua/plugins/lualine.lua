@@ -17,7 +17,6 @@ return {
                 component_separators = { left = "|", right = "|" },
             },
             sections = {
-                lualine_a = { "buffers" },
                 lualine_x = { "", "encoding", "filetype" },
             },
         })
