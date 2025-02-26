@@ -6,10 +6,10 @@ vim.keymap.set("v", "<C-c>", '"+y', {
 	noremap = true,
 })
 
-vim.keymap.set("n", "<leader>ex", vim.cmd.Ex, {
-	desc = "Open a file [e][x]plorer at the current file's location",
-	noremap = true,
-})
+-- vim.keymap.set("n", "<leader>ex", vim.cmd.Ex, {
+-- 	desc = "Open a file [e][x]plorer at the current file's location",
+-- 	noremap = true,
+-- })
 
 vim.keymap.set("n", "<leader>pr", "<cmd>silent !tmux neww tmux-sessionizer<CR>", {
 	desc = "Open a [pr]oject sessionizer",
