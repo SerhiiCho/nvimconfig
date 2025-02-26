@@ -9,9 +9,6 @@ vim.opt.guicursor = ""
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
--- Enable mouse mode, can be useful for resizing splits
-vim.opt.mouse = "a"
-
 -- Make :find and :edit search recursively in subdirectories
 vim.opt.path:append("**")
 
