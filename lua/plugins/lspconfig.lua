@@ -24,6 +24,7 @@ return {
 					"intelephense", -- php
 					"phpactor", -- php
 					"volar", -- vue 3
+					"clangd", -- c/c++
 				},
 			})
 		end,
@@ -63,6 +64,11 @@ return {
 			})
 
 			lspconfig.gopls.setup({
+				on_attach = on_attach,
+				capabilities = capabilities,
+			})
+
+			lspconfig.clangd.setup({
 				on_attach = on_attach,
 				capabilities = capabilities,
 			})

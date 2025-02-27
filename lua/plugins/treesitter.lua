@@ -10,6 +10,7 @@ local treesitter = {
 
 		configs.setup({
 			ensure_installed = {
+				"c",
 				"lua",
 				"vim",
 				"query",

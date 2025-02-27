@@ -11,11 +11,7 @@ vim.keymap.set("n", "<leader>ex", vim.cmd.Ex, {
 	noremap = true,
 })
 
-vim.keymap.set("n", "<leader>pr", "<cmd>silent !tmux neww tmux-sessionizer<CR>", {
-	desc = "Open a [pr]oject sessionizer",
-})
-
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", {
+vim.keymap.set("n", "<leader>xx", "<cmd>!chmod +x %<CR>", {
 	desc = "Make the current file executable",
 	silent = true,
 	noremap = true,

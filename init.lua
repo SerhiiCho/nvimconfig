@@ -2,7 +2,7 @@
 vim.g.mapleader = " "
 
 -- Nerd Font
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
@@ -22,6 +22,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
 })
 
 require("config.golang")
+require("config.status_line")
 require("config.lua")
 require("config.remap")
 require("config.vim_options")
