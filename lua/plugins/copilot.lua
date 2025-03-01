@@ -5,11 +5,11 @@ return {
 	{
 		"github/copilot.vim",
 		config = function()
-			vim.keymap.set("n", "<leader>cd", ":Copilot disable<CR>", {
+			vim.keymap.set("n", "<leader>cd", "<CMD>Copilot disable<CR>", {
 				desc = "Disable Copilot",
 			})
 
-			vim.keymap.set("n", "<leader>ce", ":Copilot enable<CR>", {
+			vim.keymap.set("n", "<leader>ce", "<CMD>Copilot enable<CR>", {
 				desc = "Enable Copilot",
 			})
 		end,
@@ -25,7 +25,11 @@ return {
 			require("CopilotChat").setup({})
 
 			vim.keymap.set("n", "<leader>co", "<CMD>CopilotChatToggle<CR>", {
-				desc = "Toggle Copilot Chat",
+				desc = "[C]opilot [O]pen Chat",
+			})
+
+			vim.keymap.set("n", "<leader>cs", "<CMD>CopilotChatStop<CR>", {
+				desc = "[C]opilot [S]top writing response",
 			})
 		end,
 	},
