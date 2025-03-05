@@ -10,7 +10,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 
 -- Format file before writing
 vim.api.nvim_create_autocmd("BufWritePre", {
-    pattern = { "*.ts", "*.tsx", "*.vue", "*.js" },
+    pattern = { "*.ts", "*.js" },
     callback = function()
         vim.lsp.buf.format({ async = false })
     end,

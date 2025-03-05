@@ -15,9 +15,6 @@ vim.opt.path:append("**")
 -- Enable break indent for longs wrapping lines
 vim.opt.breakindent = true
 
--- Enable yielding into system clipboard
-vim.opt.clipboard = "unnamedplus"
-
 -- Disable word wrap
 vim.opt.wrap = false
 

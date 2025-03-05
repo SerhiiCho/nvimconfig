@@ -1,6 +1,11 @@
 -- Remove highlight after search has been done
 vim.keymap.set("n", "<CR>", "<cmd>nohlsearch<CR>")
 
+vim.keymap.set("v", "<C-c>", '"+y', {
+	desc = "Copy from visual mode to system clipboard",
+	noremap = true,
+})
+
 vim.keymap.set("n", "<leader>xx", "<cmd>!chmod +x %<CR>", {
 	desc = "Make the current file executable",
 	silent = true,
