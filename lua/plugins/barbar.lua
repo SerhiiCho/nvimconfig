@@ -4,7 +4,7 @@ return {
 	{
 		"romgrk/barbar.nvim",
 		dependencies = {
-			"nvim-tree/nvim-web-devicons", -- OPTIONAL: for file icons
+			"nvim-tree/nvim-web-devicons",
 		},
 		init = function()
 			vim.g.barbar_auto_setup = false
@@ -21,10 +21,12 @@ return {
 			map("n", "<leader>8", "<Cmd>BufferGoto 8<CR>", opts)
 			map("n", "<leader>9", "<Cmd>BufferGoto 9<CR>", opts)
 			map("n", "<leader>0", "<Cmd>BufferLast<CR>", opts)
+			map("n", "<leader>W", "<Cmd>BufferClose<CR>", opts)
 		end,
 		opts = {
 			animation = true,
-
+			hide = { extensions = false, inactive = false },
+			highlight_inactive_file_icons = true,
 			icons = {
 				filetype = {
 					-- Requires `nvim-web-devicons` if `true`
