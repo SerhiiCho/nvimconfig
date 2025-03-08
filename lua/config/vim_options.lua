@@ -2,9 +2,6 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
 
--- Keey the cursor in VIM style in insert mode
-vim.o.guicursor = "n-v-c-sm-i-ci-ve:block,r-cr-o:hor20,a:blinkwait0-blinkoff0-blinkon0-Cursor/lCursor"
-
 -- Move cursor to the split screen after splitting
 vim.opt.splitbelow = true
 vim.opt.splitright = true
@@ -66,8 +63,10 @@ vim.opt.smartindent = true
 -- Dispay Whitespace Characters
 vim.opt.list = true
 vim.opt.listchars = {
-    tab = "» ",
+    -- tab = "» ",
+    -- space = "⋅",
+    -- tab = " ",
     trail = "⋅",
     nbsp = "␣",
-    space = "⋅",
+    -- space = " ",
 }
