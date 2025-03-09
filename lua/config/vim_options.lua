@@ -61,10 +61,10 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 
 -- Dispay Whitespace Characters
--- vim.opt.list = false
--- vim.opt.listchars = {
--- 	tab = "» ",
--- 	space = "⋅",
--- 	trail = "⋅",
--- 	nbsp = "␣",
--- }
+vim.opt.list = true
+vim.opt.listchars = {
+	tab = "» ",
+	space = "⋅",
+	trail = "⋅",
+	nbsp = "␣",
+}

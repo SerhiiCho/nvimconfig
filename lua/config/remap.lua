@@ -6,6 +6,11 @@ vim.keymap.set("v", "<C-c>", '"+y', {
 	noremap = true,
 })
 
+vim.keymap.set("n", "<leader>ex", "<CMD>Ex<CR>", {
+	desc = "Open file explorer",
+	noremap = true,
+})
+
 vim.keymap.set("n", "<leader>xx", "<cmd>!chmod +x %<CR>", {
 	desc = "Make the current file executable",
 	silent = true,
