@@ -9,6 +9,6 @@ local applySystemTheme = function()
 end
 
 -- Keey the cursor in VIM style in insert mode
-vim.o.guicursor = "n-v-c-sm-i-ci-ve:block,r-cr-o:hor20,a:blinkwait0-blinkoff0-blinkon0-Cursor/lCursor"
+--vim.o.guicursor = "n-v-c-sm-i-ci-ve:block,r-cr-o:hor20,a:blinkwait0-blinkoff0-blinkon0-Cursor/lCursor"
 
 applySystemTheme()
